@@ -6,7 +6,7 @@ title: Document tours
 
 ![doc-tour-gif](images/document-tours/doc-tour.gif)
 
-Document tours are a beta feature in Grist that provide a step-by-step guide to help users navigate and understand how to use your document. You can add document tours to any Grist document by creating a specially configured table named `GristDocTour`.
+Document tours are a feature in Grist that provide a step-by-step guide to help users navigate and understand how to use your document. You can add document tours to any Grist document by creating a specially configured table named `GristDocTour`.
 
 ### What is a document tour?
 
@@ -23,7 +23,7 @@ Create a new table in your document by clicking the green 'Add New' button then 
 Add the following columns to the `GristDocTour` table;
 
 1. **Title:** Text column for the tooltip header.
-2. **Body:** Text column for the tooltip content.
+2. **Body:** Text column for the tooltip content. The Cell Format can be either `TextBox` or `Markdown`.
 3. **Placement:** Text column indicating tooltip position relative to the target (e.g., top, right).  [https://floating-ui.com/](https://floating-ui.com/){:target="\_blank"} has an interactive tool that shows how this works.
 4. **Location:** Formula column with the formula `SELF_HYPERLINK() + $Location_Cell`.
 <span class="screenshot-large">*![location-formula](images/document-tours/location-formula.png)*</span>
@@ -64,6 +64,15 @@ To place the document tour popup on a specific page, you can simply copy the end
 {: .screenshot-half }
 
 <span class="screenshot-large">*![anchor-link-page](images/document-tours/anchor-link-page.png)*</span>
+
+### Using markdown in tooltips
+
+You can use Markdown content in your tooltips to have multi-lines tooltips with headings, lists, quotes, code blocks and text formatting.
+To activate Markdown rendering, choose `Markdown` as "Cell Cormat" for the `Body` colmun.
+The content of the cells under body are rendered as Markdown in the same way it will appear in your tooltip.
+
+!!! note "💡 Tip:"
+    Not all markdown syntax is supported : images, ~strikethrough~ text formating and custom HTML are not supported.
 
 ### Reviewing your document tour
 

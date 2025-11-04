@@ -71,6 +71,8 @@ You can use Markdown content in your tooltips to have multi-lines tooltips with 
 To activate Markdown rendering, choose `Markdown` as "Cell Cormat" for the `Body` colmun.
 The content of the cells under body are rendered as Markdown in the same way it will appear in your tooltip.
 
+<span class="screenshot-large">*![anchor-link-page](images/document-tours/markdown-content.png)*</span>
+
 !!! note "💡 Tip:"
     Not all markdown syntax is supported : images, ~strikethrough~ text formating and custom HTML are not supported.
 
